@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>マルバツゲーム</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js"></script>
+  </head>
+  <!--画面全体-->
+  <body>
+    <!--白い枠の領域-->
+    <div class="white-box">
+      <!--タイトルを表示する領域-->
+      <div class="title">
+      　○×ゲーム
+      </div>
+
+      <!--分割線-->
+      <hr>
+      <!--順番や勝敗を表示する領域-->
+      <div id="info" class="info">
+       ○の番！
+      </div>
+
+      <!--マス目を表示する領域-->
+      <div class="squares">
+       <table align="center">
+        <tr>
+         <td id="00" onclick="game('00');"></td>
+         <td id="01" onclick="game('01');"></td>
+         <td id="02" onclick="game('02');"></td>
+        </tr>
+        <tr>
+         <td id="10" onclick="game('10');"></td>
+         <td id="11" onclick="game('11');"></td>
+         <td id="12" onclick="game('12');"></td>
+        </tr>
+        <tr>
+          <td id="20" onclick="game('20');"></td>
+          <td id="21" onclick="game('21');"></td>
+          <td id="22" onclick="game('22');"></td>
+         </tr>
+       </table>
+      </div>
+      <!--ボタンを表示する領域-->
+      <div class="reload">
+       <button type="button" onclick="reset();">やり直す</button>
+      </div>
+    </div>
+  </body>
+</html>
